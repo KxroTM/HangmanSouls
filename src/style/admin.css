@@ -1,0 +1,1874 @@
+@media screen and (max-width : 1499px ) {
+    
+    .titre {
+      text-align: center;
+      font: italic small-caps bold 16px/2 cursive;
+      color: whitesmoke;
+  } 
+
+  body {
+      background-image: url("https://i.pinimg.com/originals/00/97/39/00973911031e06bbed773d4e8987df44.gif");
+      background-size: cover;
+  }
+
+
+  /*bg*/
+  /*txt*/
+  /*success*/
+  /*account button*/
+  .account {
+      display: flex;
+      justify-content: space-around;
+      top: 125%;
+      left: 125%;
+      margin-left: -13.3%;
+      margin-top: 5%;
+    }
+    
+    .account button {
+      width: 547px;
+      height: 173px;
+      background-color: rgb(253, 54, 54);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+    
+    .account button:before, .account button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: rgb(84, 215, 222);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .account button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .account button:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .account button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+    
+    .account button span:before, .account button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: rgb(84, 215, 222);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .account button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .account button span:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .account button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .account button p:before, .account button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+    
+    .account button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .account button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: rgb(84, 215, 222);
+    }
+    
+    .account button:hover:before, .account button:hover:after {
+      width: 100%;
+    }
+    
+    .account button:hover span {
+      z-index: 1;
+    }
+    
+    .account button:hover span:before, .account button:hover span:after {
+      height: 100%;
+    }
+    
+    .account button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .account button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .account button.start {
+      background-color: rgb(84, 215, 222);
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+    
+    .account button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .account button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+    
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+    
+    .account button.start:hover:before, .account button.start:hover:after {
+      display: none;
+    }
+    
+    .account button.start:hover span {
+      display: none;
+    }
+    
+    .account button:active {
+      outline: none;
+      border: none;
+    }
+    
+    .account button:focus {
+      outline: 0;
+    }
+
+    /*bg*/
+  /*txt*/
+  /*success*/
+  /*button shop*/
+  .shop {
+      display: flex;
+      justify-content: space-around;
+      top: 125%;
+      left: 125%;
+      margin-top: -2.4%;
+      margin-left: -32.8%;
+    }
+    
+    .shop button {
+      width: 250px;
+      height: 300px;
+      background-color: rgb(88, 94, 92);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+    
+    .shop button:before, .shop button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #44d8a4;
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .shop button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .shop button:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .shop button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+    
+    .shop button span:before, .shop button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: #44d8a4;
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .shop button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .shop button span:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .shop button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .shop button p:before, .shop button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+    
+    .shop button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .shop button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: #44d8a4;
+    }
+    
+    .shop button:hover:before, .shop button:hover:after {
+      width: 100%;
+    }
+    
+    .shop button:hover span {
+      z-index: 1;
+    }
+    
+    .shop button:hover span:before, .shop button:hover span:after {
+      height: 100%;
+    }
+    
+    .shop button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .shop button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .shop button.start {
+      background-color: #44d8a4;
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+    
+    .shop button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .shop button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+    
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+    
+    .shop button.start:hover:before, .shop button.start:hover:after {
+      display: none;
+    }
+    
+    .shop button.start:hover span {
+      display: none;
+    }
+    
+    .shop button:active {
+      outline: none;
+      border: none;
+    }
+    
+    .shop button:focus {
+      outline: 0;
+    }
+
+
+    /*scoreboard button*/
+    .scoreboard {
+      display: flex;
+      justify-content: space-around;
+      top: 125%;
+      left: 125%;
+      margin-top: -35%;
+      margin-right: -41.2%; 
+      margin-left: 0.1%;
+    } 
+
+    .scoreboard button {
+      width: 250px;
+      height: 173px;
+      background-color: rgb(72, 225, 164);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+    
+    .scoreboard button:before, .scoreboard button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: rgb(88, 94, 92);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .scoreboard button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .scoreboard button:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .scoreboard button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+    
+    .scoreboard button span:before, .scoreboard button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: rgb(88, 94, 92);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .scoreboard button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .scoreboard button span:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .scoreboard button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .scoreboard button p:before, .scoreboard button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+    
+    .scoreboard button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .scoreboard button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: rgb(88, 94, 92);
+    }
+    
+    .scoreboard button:hover:before, .scoreboard button:hover:after {
+      width: 100%;
+    }
+    
+    .scoreboard button:hover span {
+      z-index: 1;
+    }
+    
+    .scoreboard button:hover span:before, .scoreboard button:hover span:after {
+      height: 100%;
+    }
+    
+    .scoreboard button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .scoreboard button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .scoreboard button.start {
+      background-color: rgb(88, 94, 92);
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+    
+    .scoreboard button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .scoreboard button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+    
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+    
+    .scoreboard button.start:hover:before, .scoreboard button.start:hover:after {
+      display: none;
+    }
+    
+    .scoreboard button.start:hover span {
+      display: none;
+    }
+    
+    .scoreboard button:active {
+      outline: none;
+      border: none;
+    }
+    
+    .scoreboard button:focus {
+      outline: 0;
+    } 
+
+
+    /*hangoftheday button*/
+    .hangoftheday {
+      display: flex;
+      justify-content: space-around;
+      top: 125%;
+      left: 125%;
+      margin-top: -2.4%;
+      margin-right: -23%;
+      margin-left: -1.6%;
+    }
+
+    .hangoftheday button {
+      width: 547px;
+      height: 149px;
+      background-color: rgb(84, 215, 222);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+    
+    .hangoftheday button:before, .hangoftheday button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: rgb(253, 54, 54);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .hangoftheday button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .hangoftheday button:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .hangoftheday button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+    
+    .hangoftheday button span:before, .hangoftheday button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: rgb(253, 54, 54);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .hangoftheday button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .hangoftheday button span:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .hangoftheday button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .hangoftheday button p:before, .hangoftheday button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+    
+    .hangoftheday button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .hangoftheday button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: rgb(253, 54, 54);
+    }
+    
+    .hangoftheday button:hover:before, .hangoftheday button:hover:after {
+      width: 100%;
+    }
+    
+    .hangoftheday button:hover span {
+      z-index: 1;
+    }
+    
+    .hangoftheday button:hover span:before, .hangoftheday button:hover span:after {
+      height: 100%;
+    }
+    
+    .hangoftheday button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .hangoftheday button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .hangoftheday button.start {
+      background-color: rgb(253, 54, 54);
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+    
+    .hangoftheday button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .hangoftheday button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+    
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+    
+    .hangoftheday button.start:hover:before, .hangoftheday button.start:hover:after {
+      display: none;
+    }
+    
+    .hangoftheday button.start:hover span {
+      display: none;
+    }
+    
+    .hangoftheday button:active {
+      outline: none;
+      border: none;
+    }
+    
+    .hangoftheday button:focus {
+      outline: 0;
+    }
+
+
+    /*managegame button*/
+    .managegame {
+      display: flex;
+      justify-content: space-around;
+      top: 125%;
+      left: 125%;
+      margin-top: -2.5%;
+      margin-right: -23%;
+      margin-left: -1.6%;
+    }
+
+    .managegame button {
+      width: 547px;
+      height: 149px;
+      background-color: rgb(72, 225, 164);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+    
+    .managegame button:before, .managegame button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: rgb(88, 94, 92);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .managegame button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .managegame button:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .managegame button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+    
+    .managegame button span:before, .managegame button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: rgb(88, 94, 92);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .managegame button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+    
+    .managegame button span:after {
+      left: 0;
+      bottom: 0;
+    }
+    
+    .managegame button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .managegame button p:before, .managegame button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+    
+    .managegame button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .managegame button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: rgb(88, 94, 92);
+    }
+    
+    .managegame button:hover:before, .managegame button:hover:after {
+      width: 100%;
+    }
+    
+    .managegame button:hover span {
+      z-index: 1;
+    }
+    
+    .managegame button:hover span:before, .managegame button:hover span:after {
+      height: 100%;
+    }
+    
+    .managegame button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .managegame button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .managegame button.start {
+      background-color: rgb(88, 94, 92);
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+    
+    .managegame button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+    
+    .managegame button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+    
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+    
+    .managegame button.start:hover:before, .managegame button.start:hover:after {
+      display: none;
+    }
+    
+    .managegame button.start:hover span {
+      display: none;
+    }
+    
+    .managegame button:active {
+      outline: none;
+      border: none;
+    }
+    
+    .managegame button:focus {
+      outline: 0;
+    }
+
+    .home button {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.27);
+        padding: 10px 20px;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .home button:hover {
+        background-color: rgba(255, 255, 255, 0.582);
+    }
+
+    .home {
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+    }
+
+}
+
+@media screen and (min-width : 1500px ) {
+
+    .titre {
+      text-align: center;
+      font: italic small-caps bold 16px/2 cursive;
+      color: whitesmoke;
+    } 
+
+    body {
+      background-image: url("https://i.pinimg.com/originals/00/97/39/00973911031e06bbed773d4e8987df44.gif");
+      background-size: cover;
+    }
+
+
+    /*bg*/
+    /*txt*/
+    /*success*/
+    /*account button*/
+    .account {
+      display: flex;
+      justify-content: space-around;
+      top: 20px; 
+      left: 20px;
+      margin-left: -13.3%;
+      margin-top: 5%;
+    }
+
+    .account button {
+      width: 547px;
+      height: 173px;
+      background-color: rgb(253, 54, 54);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+
+    .account button:before, .account button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: rgb(84, 215, 222);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .account button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .account button:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .account button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+
+    .account button span:before, .account button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: rgb(84, 215, 222);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .account button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .account button span:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .account button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .account button p:before, .account button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+
+    .account button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .account button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: rgb(84, 215, 222);
+    }
+
+    .account button:hover:before, .account button:hover:after {
+      width: 100%;
+    }
+
+    .account button:hover span {
+      z-index: 1;
+    }
+
+    .account button:hover span:before, .account button:hover span:after {
+      height: 100%;
+    }
+
+    .account button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .account button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .account button.start {
+      background-color: rgb(84, 215, 222);
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .account button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .account button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+
+    .account button.start:hover:before, .account button.start:hover:after {
+      display: none;
+    }
+
+    .account button.start:hover span {
+      display: none;
+    }
+
+    .account button:active {
+      outline: none;
+      border: none;
+    }
+
+    .account button:focus {
+      outline: 0;
+    }
+
+    /*bg*/
+    /*txt*/
+    /*success*/
+    /*button shop*/
+    .shop {
+      display: flex;
+      justify-content: space-around;
+      top: 20px;
+      left: 20px;
+      margin-top: -2.4%;
+      margin-left: -32.8%;
+    }
+
+    .shop button {
+      width: 250px;
+      height: 300px;
+      background-color: rgb(88, 94, 92);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+
+    .shop button:before, .shop button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #44d8a4;
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .shop button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .shop button:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .shop button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+
+    .shop button span:before, .shop button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: #44d8a4;
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .shop button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .shop button span:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .shop button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .shop button p:before, .shop button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+
+    .shop button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .shop button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: #44d8a4;
+    }
+
+    .shop button:hover:before, .shop button:hover:after {
+      width: 100%;
+    }
+
+    .shop button:hover span {
+      z-index: 1;
+    }
+
+    .shop button:hover span:before, .shop button:hover span:after {
+      height: 100%;
+    }
+
+    .shop button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .shop button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .shop button.start {
+      background-color: #44d8a4;
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .shop button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .shop button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+
+    .shop button.start:hover:before, .shop button.start:hover:after {
+      display: none;
+    }
+
+    .shop button.start:hover span {
+      display: none;
+    }
+
+    .shop button:active {
+      outline: none;
+      border: none;
+    }
+
+    .shop button:focus {
+      outline: 0;
+    }
+
+
+    /*scoreboard button*/
+    .scoreboard {
+      display: flex;
+      justify-content: space-around;
+      top: 20px;
+      left: 20px;
+      margin-top: -34%;
+      margin-right: -40.2%; 
+      margin-left: -0.5%;
+    }
+
+    .scoreboard button {
+      width: 250px;
+      height: 173px;
+      background-color: rgb(72, 225, 164);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+
+    .scoreboard button:before, .scoreboard button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: rgb(88, 94, 92);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .scoreboard button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .scoreboard button:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .scoreboard button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+
+    .scoreboard button span:before, .scoreboard button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: rgb(88, 94, 92);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .scoreboard button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .scoreboard button span:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .scoreboard button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .scoreboard button p:before, .scoreboard button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+
+    .scoreboard button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .scoreboard button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: rgb(88, 94, 92);
+    }
+
+    .scoreboard button:hover:before, .scoreboard button:hover:after {
+      width: 100%;
+    }
+
+    .scoreboard button:hover span {
+      z-index: 1;
+    }
+
+    .scoreboard button:hover span:before, .scoreboard button:hover span:after {
+      height: 100%;
+    }
+
+    .scoreboard button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .scoreboard button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .scoreboard button.start {
+      background-color: rgb(88, 94, 92);
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .scoreboard button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .scoreboard button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+
+    .scoreboard button.start:hover:before, .scoreboard button.start:hover:after {
+      display: none;
+    }
+
+    .scoreboard button.start:hover span {
+      display: none;
+    }
+
+    .scoreboard button:active {
+      outline: none;
+      border: none;
+    }
+
+    .scoreboard button:focus {
+      outline: 0;
+    } 
+
+
+    /*hangoftheday button*/
+    .hangoftheday {
+      display: flex;
+      justify-content: space-around;
+      top: 20px;
+      left: 20px;
+      margin-top: -2.4%;
+      margin-right: -21%;
+      margin-left: -0.9%;
+    }
+
+    .hangoftheday button {
+      width: 547px;
+      height: 149px;
+      background-color: rgb(84, 215, 222);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+
+    .hangoftheday button:before, .hangoftheday button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: rgb(253, 54, 54);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .hangoftheday button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .hangoftheday button:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .hangoftheday button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+
+    .hangoftheday button span:before, .hangoftheday button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: rgb(253, 54, 54);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .hangoftheday button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .hangoftheday button span:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .hangoftheday button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hangoftheday button p:before, .hangoftheday button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+
+    .hangoftheday button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hangoftheday button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: rgb(253, 54, 54);
+    }
+
+    .hangoftheday button:hover:before, .hangoftheday button:hover:after {
+      width: 100%;
+    }
+
+    .hangoftheday button:hover span {
+      z-index: 1;
+    }
+
+    .hangoftheday button:hover span:before, .hangoftheday button:hover span:after {
+      height: 100%;
+    }
+
+    .hangoftheday button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .hangoftheday button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hangoftheday button.start {
+      background-color: rgb(253, 54, 54);
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .hangoftheday button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .hangoftheday button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+
+    .hangoftheday button.start:hover:before, .hangoftheday button.start:hover:after {
+      display: none;
+    }
+
+    .hangoftheday button.start:hover span {
+      display: none;
+    }
+
+    .hangoftheday button:active {
+      outline: none;
+      border: none;
+    }
+
+    .hangoftheday button:focus {
+      outline: 0;
+    }
+
+
+    /*managegame button*/
+    .managegame {
+      display: flex;
+      justify-content: space-around;
+      top: 20px;
+      left: 20px;
+      margin-top: -2.5%;
+      margin-right: -21%;
+      margin-left: -0.9%;
+    }
+
+    .managegame button {
+      width: 547px;
+      height: 149px;
+      background-color: rgb(72, 225, 164);
+      margin: 20px;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+
+    .managegame button:before, .managegame button:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: rgb(88, 94, 92);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .managegame button:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .managegame button:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .managegame button span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+
+    .managegame button span:before, .managegame button span:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0;
+      background-color: rgb(88, 94, 92);
+      transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .managegame button span:before {
+      right: 0;
+      top: 0;
+      transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+    }
+
+    .managegame button span:after {
+      left: 0;
+      bottom: 0;
+    }
+
+    .managegame button p {
+      padding: 0;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .managegame button p:before, .managegame button p:after {
+      position: absolute;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+      z-index: 1;
+      left: 0;
+    }
+
+    .managegame button p:before {
+      content: attr(data-title);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .managegame button p:after {
+      content: attr(data-text);
+      top: 150%;
+      color: rgb(88, 94, 92);
+    }
+
+    .managegame button:hover:before, .managegame button:hover:after {
+      width: 100%;
+    }
+
+    .managegame button:hover span {
+      z-index: 1;
+    }
+
+    .managegame button:hover span:before, .managegame button:hover span:after {
+      height: 100%;
+    }
+
+    .managegame button:hover p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .managegame button:hover p:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .managegame button.start {
+      background-color: rgb(88, 94, 92);
+      box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .managegame button.start p:before {
+      top: -50%;
+      transform: rotate(5deg);
+    }
+
+    .managegame button.start p:after {
+      color: white;
+      transition: all 0s ease;
+      content: attr(data-start);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: start 0.3s ease;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes start {
+      from {
+        top: -50%;
+      }
+    }
+
+    .managegame button.start:hover:before, .managegame button.start:hover:after {
+      display: none;
+    }
+
+    .managegame button.start:hover span {
+      display: none;
+    }
+
+    .managegame button:active {
+      outline: none;
+      border: none;
+    }
+
+    .managegame button:focus {
+      outline: 0;
+    }
+
+    .home button {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.27);
+        padding: 10px 20px;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .home button:hover {
+        background-color: rgba(255, 255, 255, 0.582);
+    }
+
+    .home {
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+    }
+
+
+}

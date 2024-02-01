@@ -1,0 +1,42 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/00/97/39/00973911031e06bbed773d4e8987df44.gif");
+    background-size: cover;
+}
+
+.titre {
+    text-align: center;
+    font: italic small-caps bold 16px/2 cursive;
+    color: whitesmoke;
+    margin-top: 15%;
+}
+
+.comic-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: gray;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 46.5%;
+  }
+  
+  .comic-button:hover {
+    background-color: #fff;
+    color: gray;
+    border: 2px solid gray;
+    box-shadow: 5px 5px 0px gray;
+  }
+  
+  .comic-button:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+  

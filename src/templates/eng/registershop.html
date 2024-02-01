@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url("https://steamuserimages-a.akamaihd.net/ugc/92726830869919146/2FA5EA827A919FEF7D5CC4A74A7491ADDF729E01/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+            background-position-y: 53%;
+            background-position-x: 110%;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f032;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 250px;
+        height: 230px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: rgba(24, 20, 20, 0.987);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+        }
+
+        .login-box .user-box {
+        position: relative;
+        }
+
+        .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+        }
+
+        .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+        }
+
+        .login-box .user-box input:focus ~ label,
+        .login-box .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #bdb8b8;
+        font-size: 12px;
+        }
+
+        .login-box form button {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #ffffff;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px
+        
+        }
+
+        .login-box button:hover {
+        background: #5f4817;
+        color: #fff;
+        border-radius: 5px;
+        }
+
+        .shop {
+            position: absolute;
+            bottom: 125%;
+            left: -50%;
+            width: 200%;
+        }
+
+        button {
+            background-color: transparent;
+        }
+
+</style>
+</head>
+<body>
+    <div class="login-box">
+        <form action="/registershop" method="post">
+            <div class="user-box">
+                <input type="text" name="username">
+                <label>Username</label>
+            </div>
+            <center>
+                <a href="http://localhost:8080/shop">
+                    <button>Continue</button>
+                </a>
+            </center>
+            <div class="shop">
+                <img src="https://cdn.discordapp.com/attachments/1164477465993957386/1200447234127429653/efe95c3f08c37abc7d4089fdb7adcc17.png?ex=65c6369b&is=65b3c19b&hm=80dbdbebb4eeb70fde5c6c43f4fe5470a0d90488a7a40a692ea4e8c942176b75&" width="100%"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

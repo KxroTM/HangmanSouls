@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Hangman</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url("https://i.pinimg.com/originals/22/ba/4d/22ba4d403b0c9c172526be971b0c0ab7.gif");
+            background-position-y: 90%;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .contennue_carré_noir {
+            background-color: rgb(109, 109, 109);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin: 0;
+            color: rgb(255, 0, 0);
+        }
+
+        h2 {
+            font-size: 15px;
+            margin: 0;
+            color: white;
+        }
+
+        .zone_texte {
+            background-color: rgb(109, 109, 109);
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .tape_ecrire {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #876464;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: bold;
+            margin: 0;
+            color: rgb(255, 255, 255);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgb(109, 109, 109);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .letterguessed {
+            position: relative;
+            top: -40%;
+            right: -220%;
+            background-color: rgba(109, 109, 109, 0.067);
+            padding: 10px;
+            border-radius: 10px;
+            min-height: 50px;
+            width: 150px;
+        }
+
+
+
+        /* ECRAN ELIAS */
+        @media screen and (min-width : 1500px ) {
+
+            .head {
+                position: absolute;
+                top: 61%;
+                left: 21%;
+                width: 1px;
+                border: 30px solid rgb(255, 255, 255);
+                border-radius: 50%;
+            }
+
+            .corps {
+                position: absolute;
+                top: 71%;
+                left: 19.1%;
+                width: 110px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(90deg);
+                border-radius: 30px;
+            }
+
+            .brasg {
+                position: absolute;
+                top: 67.3%;
+                left: 20.5%;
+                width: 70px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(70deg);
+                border-radius: 30px;
+            }
+            .brasd {
+                position: absolute;
+                top: 68.3%;
+                left: 19.3%;
+                width: 70px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(-65deg);
+                border-radius: 30px;
+            }
+            .jambeg {
+                position: absolute;
+                top: 79%;
+                left: 19.6%;
+                width: 66px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(-75deg);
+                border-radius: 30px;
+            }
+            .jambed {
+                position: absolute;
+                top: 79%;
+                left: 20.5%;
+                width: 66px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(85deg);
+                
+            }
+
+            .poutre {
+                position: absolute;
+                top: 58%;
+                left: 9%;
+                width: 290px;
+                border:10px solid rgb(59, 35, 3);
+            }
+            .stick {
+                position: absolute;
+                top: 60%;
+                left: 21%;
+                width: 40px;
+                transform: rotate(90deg);
+                border:1px solid black;
+            }
+            .support {
+                position: absolute;
+                top: 74%;
+                left: 3%;
+                width: 320px;
+                transform: rotate(90deg);
+                border:10px solid rgb(59, 35, 3);
+            }
+            .socle {
+                position: absolute;
+                top: 90%;
+                left: 10%;
+                width: 200px;
+                border:10px solid rgb(59, 35, 3);
+            }
+
+
+        .spell1 {
+            position: fixed;
+            top: 20%;
+            left:0%;
+        }
+        .spell2 {
+            position: fixed;
+            top: 30%;
+            left:-7%;
+        }
+        .spell3 {
+            position: fixed;
+            top: 42%;
+            left:-13%;
+        }
+
+
+        .spell1 button {
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 80%;
+            height: auto;
+        }
+
+        .spell1 button img {
+            width: 100%;
+            height: auto;
+        }
+
+        .spell2 button {
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+            height: auto;
+        }
+
+        .spell2 button img {
+            width: 100%;
+            height: auto;
+        }
+
+        .spell3 button {
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 17%;
+            height: auto;
+        }
+
+        .spell3 button img {
+            width: 100%;
+            height: auto;
+        }
+
+            .Gameover {
+                position: absolute;
+                top: 33%;
+                left: 30%;
+            
+            }
+
+            .bouuton button {
+                font-family: "";
+                position: absolute; 
+                bottom: 36%;
+                left: 38%;
+                cursor: pointer;
+                font-size: 120%;
+                background-color: rgba(95, 158, 160, 0.082);
+                border-color: rgba(0, 0, 0, 0.349);
+                color: ghostwhite;
+                letter-spacing: 0.5rem;
+                border: none;
+
+            }
+            
+
+            .Chevalier {
+                position: absolute;
+                bottom: 32%;
+                right: 24%;
+                filter: brightness(0.55);
+                
+            }
+            .giveup {
+                position: absolute; 
+                bottom: 36%;
+                left: 51%;
+                font-size: 100%;
+                width: 20%;
+                
+            }
+            .bouton button {
+                font-family: "";
+                position: absolute; 
+                bottom: 41%;
+                left: 56%;
+                cursor: pointer;
+                font-size: 120%;
+                background-color: rgba(95, 158, 160, 0);
+                border-color: rgba(0, 0, 0, 0);
+                color: ghostwhite;
+                letter-spacing: 0.5rem;
+                border: none;
+
+                height: 5%;
+
+            }
+
+        .Win {
+            position: absolute;
+            top: 10%;
+            left: 33%;
+           
+            }
+
+        .Chevalier2 {
+                position: absolute;
+                bottom: 27%;
+                right: 45%;
+                filter: brightness(0.55);
+                
+            }
+
+            .home {
+                position: absolute; 
+                bottom: 45.5%;
+                left: 27%;
+                font-size: 100%; 
+                width: 20%;               
+            }
+        }
+
+        /* ECRAN YOUSSEF */
+        @media screen and (max-width : 1499px ) {
+
+            .head {
+                position: absolute;
+                top: 55%;
+                left: 21%;
+                width: 1px;
+                border: 30px solid rgb(255, 255, 255);
+                border-radius: 50%;
+            }
+
+            .corps {
+                position: absolute;
+                top: 68%;
+                left: 18.5%;
+                width: 110px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(90deg);
+                border-radius: 30px;
+            }
+
+            .brasg {
+                position: absolute;
+                top: 66%;
+                left: 20.5%;
+                width: 70px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(70deg);
+                border-radius: 30px;
+            }
+            .brasd {
+                position: absolute;
+                top: 66%;
+                left: 19%;
+                width: 70px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(-65deg);
+                border-radius: 30px;
+            }
+            .jambeg {
+                position: absolute;
+                top: 80%;
+                left: 19.3%;
+                width: 66px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(-75deg);
+                border-radius: 30px;
+            }
+            .jambed {
+                position: absolute;
+                top: 80%;
+                left: 20.2%;
+                width: 66px;
+                border:2px solid rgb(255, 255, 255);
+                transform: rotate(85deg);
+                
+            }
+
+            .poutre {
+                position: absolute;
+                top: 48%;
+                left: 9%;
+                width: 290px;
+                border:10px solid rgb(65, 40, 13);
+            }
+            .stick {
+                position: absolute;
+                top: 55%;
+                left: 20%;
+                width: 70px;
+                transform: rotate(90deg);
+                border:1px solid black;
+            }
+            .support {
+                position: absolute;
+                top: 67%;
+                left: 3%;
+                width: 320px;
+                transform: rotate(90deg);
+                border:10px solid rgb(65, 40, 13);
+            }
+            .socle {
+                position: absolute;
+                top: 90%;
+                left: 10%;
+                width: 200px;
+                border:10px solid rgb(65, 40, 13);
+            }
+
+
+
+            .spell1 {
+                position: fixed;
+                top: 20%;
+                left:0%;
+            }
+            .spell2 {
+                position: fixed;
+                top: 32%;
+                left:-9%;
+            }
+            .spell3 {
+                position: fixed;
+                top: 48%;
+                left:-17%;
+            }
+
+
+            .spell1 button {
+                padding: 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                width: 80%;
+                height: auto;
+            }
+
+            .spell1 button img {
+                width: 100%;
+                height: auto;
+            }
+
+            .spell2 button {
+                padding: 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                width: 20%;
+                height: auto;
+            }
+
+            .spell2 button img {
+                width: 100%;
+                height: auto;
+            }
+
+            .spell3 button {
+                padding: 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                width: 17%;
+                height: auto;
+            }
+
+            .spell3 button img {
+                width: 100%;
+                height: auto;
+            }
+                .Gameover {
+                position: absolute;
+                top: 28%;
+                left: 20%;
+                
+                }
+
+            .bouuton button {
+                font-family: "";
+                position: absolute; 
+                bottom: 25%;
+                left: 30%;
+                cursor: pointer;
+                font-size: 120%;
+                background-color: rgba(95, 158, 160, 0.082);
+                border-color: rgba(0, 0, 0, 0.349);
+                color: ghostwhite;
+                letter-spacing: 0.5rem;
+                border: none;
+
+            }
+            
+
+            .Chevalier {
+                position: absolute;
+                bottom: 18%;
+                right: 18%;
+                filter: brightness(0.55);
+                
+            }
+            .giveup {
+                position: absolute; 
+                bottom: 25%;
+                left: 53%;
+                font-size: 100%;
+                width: 20%;
+                
+            }
+            
+            .bouton button {
+                font-family: "";
+                position: absolute; 
+                bottom: 41%;
+                left: 58%;
+                cursor: pointer;
+                font-size: 120%;
+                background-color: rgba(95, 158, 160, 0);
+                border-color: rgba(0, 0, 0, 0);
+                color: ghostwhite;
+                letter-spacing: 0.5rem;
+                border: none;
+
+                height: 5%;
+
+            }
+
+            .Win {
+                position: absolute;
+                top: -12%;
+                left: 27%;
+           
+            }
+
+            .Chevalier2 {
+                position: absolute;
+                bottom: 22%;
+                right: 45%;
+                filter: brightness(0.55);
+                width: 14.5%;
+                
+            }
+
+            .home {
+                position: absolute; 
+                bottom: 45.5%;
+                left: 16%;
+                font-size: 100%; 
+                width: 30%;               
+            }
+        
+        }
+        
+
+    </style>
+</head>
+    <body>
+        {{if (eq .GameState 1)}}
+
+
+            <!-- CODE DE Win  -->
+            <div class="Win">
+                <img src="../style/2bw103b-removebg-preview.png" width="150%"/>
+            </div>
+            <div class="Chevalier2">
+                <img src="../style/38fe1f49248c4096f1d29e8e45f8d466u8PrF0vi4LvB0WqE-0-removebg-preview.png" width="100%"/>
+            </div>
+            <br/>  
+        
+            <div class ="bouton">
+                <form method="post" action="/retry">
+                    <button type="submit">Continue</button>
+                </form>
+            <div class="home">
+                <a href="http://localhost:8080/home">
+                    <button>Go back home</button>
+                </a>
+            </div>
+            <!-- FIN -->
+
+
+        {{else if (eq .GameState 2)}}
+
+
+            <!-- CODE DE LOOSE  -->
+            <div class="Gameover">
+                <img src="../style/Game_Over_Deltarune-removebg-preview.png" width="150%"/>
+            </div>
+            <div class="Chevalier">
+                <img src="https://cdn.discordapp.com/attachments/1151066660715896855/1196770383655878697/ko-removebg-preview.png?ex=65b8d646&is=65a66146&hm=a49b05737faf39328ad5be0f4613873ccc615a8695bb16bcefc27b376e0028a6&" width="47%"/>
+                <p>The word was {{.Word}}</p>
+            </div>
+            <br/>  
+        
+            <div class ="bouuton">
+                <form method="post" action="/retry">
+                    <button type="submit">Respawn</button>
+                </form>
+                <a href="http://localhost:8080/home">
+                    <div class="giveup">
+                        <button>Give up</button>
+                </a>
+    
+            </div>
+            <!-- FIN -->
+
+
+
+        {{else}}
+
+
+            
+            <div class="spell1">
+                <form method="post" action="/use-spell1">
+                    <button type="submit"><img src="../style/heart.png" width="80%"/></button>            <p>x {{.Spell1}}</p>
+                </form>
+            </div> 
+            <div class="spell2">
+                <form method="post" action="/use-spell2">
+                    <button type="submit" ><img src="../style/star.png" width="20%"/></button>            <p>x {{.Spell2}}</p>
+                </form>
+            </div>
+            <div class="spell3">
+                <form method="post" action="/use-spell3">
+                    <button type="submit"><img src="../style/book.png" width="17%"/></button>            <p>x {{.Spell3}}</p>
+                </form>
+            </div>
+        <form method="post" action="/hangman">
+
+            <h1> Guess the Word </h1>
+            <br/>
+            <div class="middle">
+                <div class="contennue_carré_noir">
+                <h2>❤️ {{.TryLeft}} HP</h2>
+                </div><br>
+                <div class="contennue_carré_noir">
+                <h2>{{.WordHidden}}</h2>
+                </div>
+            </div>
+            <div class="zone_texte">
+                <input class="tape_ecrire" name="answer" placeholder="Choose a letter..." autofocus>
+            </div>
+            <br/>
+            <button type="submit">Send</button>
+            <div class = "letterguessed">
+                <p>Letters guessed : {{.Guessedletter}}</p>
+            </div>
+                {{ if (eq .TryLeft 10)}}
+                <div class="socle"></div>
+                {{ else if (eq .TryLeft 9)}}
+                <div class="socle"></div>
+                <div class="support"></div>
+                {{ else if (eq .TryLeft 8)}}
+                <div class="socle"></div>
+                <div class="poutre"></div>
+                <div class="support"></div>
+                {{ else if (eq .TryLeft 7)}}
+                <div class="socle"></div>
+                <div class="stick"></div>
+                <div class="support"></div>
+                <div class="poutre"></div>
+                {{ else if (eq .TryLeft 6)}}
+                <div class="socle"></div>
+                <div class="stick"></div>
+                <div class="support"></div>
+                <div class="poutre"></div>
+                <div class="head"></div>
+                {{ else if (eq .TryLeft 5)}}
+                <div class="socle"></div>
+                <div class="stick"></div>
+                <div class="support"></div>
+                <div class="poutre"></div>
+                <div class="head"></div>
+                <div class="corps"></div>
+                {{ else if (eq .TryLeft 4)}}
+                <div class="socle"></div>
+                <div class="stick"></div>
+                <div class="support"></div>
+                <div class="poutre"></div>
+                <div class="head"></div>
+                <div class="corps"></div>
+                <div class="brasg"></div>
+                {{ else if (eq .TryLeft 3)}}
+                <div class="socle"></div>
+                <div class="stick"></div>
+                <div class="support"></div>
+                <div class="poutre"></div>
+                <div class="head"></div>
+                <div class="corps"></div>
+                <div class="brasg"></div>
+                <div class="brasd"></div>
+                {{ else if (eq .TryLeft 2)}}
+                <div class="socle"></div>
+                <div class="stick"></div>
+                <div class="support"></div>
+                <div class="poutre"></div>
+                <div class="head"></div>
+                <div class="corps"></div>
+                <div class="brasg"></div>
+                <div class="brasd"></div>
+                <div class="jambeg"></div>
+                {{ else if (eq .TryLeft 1)}}
+                <div class="jambed"></div>
+                <div class="socle"></div>
+                <div class="stick"></div>
+                <div class="support"></div>
+                <div class="poutre"></div>
+                <div class="head"></div>
+                <div class="corps"></div>
+                <div class="brasg"></div>
+                <div class="brasd"></div>
+                <div class="jambeg"></div>
+                {{end}}
+        </form>
+        {{end}}
+
+
+    </body>
+</html>

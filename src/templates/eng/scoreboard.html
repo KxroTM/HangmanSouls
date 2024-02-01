@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Scoreboard</title>
+  <!-- <link href="../style/scoreboard.css" rel="stylesheet"> -->
+  <style>
+  
+body {
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/92726830869919146/2FA5EA827A919FEF7D5CC4A74A7491ADDF729E01/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+    background-position-y: 53%;
+    background-position-x: 110%;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f032;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    position: sticky;
+    margin-top: 3%;
+    margin-left: 0%;
+    height: 650px;
+    width: 600px;   
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(65, 65, 65, 0.308);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+}
+.scoreboard {
+    margin-top: 10%;    
+}
+
+.neon {
+    color: #ffffff;
+    text-shadow:  0 0 7px #fff, 
+                0 0 10px #fff, 
+}
+
+form.score {
+    position: sticky;
+    margin-top: 3%;
+    margin-left: 0%;
+    height: 650px;
+    width: 600px;   
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(65, 65, 65, 0.308);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+    margin-bottom: 10px; 
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+img {
+    width: 496px; 
+    height: 77px; 
+    flex-shrink: 0;
+}
+
+.user img{
+    width: 200px; 
+    height: 50px; 
+    flex-shrink: 0;
+    position: absolute;
+    right: 55%;
+    top: 20%;
+}
+
+.scores img{
+    width: 170px; 
+    height: 45px; 
+    flex-shrink: 0;
+    position: absolute;
+    right: 15%;
+    top: 20.2%;
+}
+
+.datascore {
+    position: absolute;
+    right: 27%;
+    top: 30%;
+}
+
+.datauser {
+    position: absolute;
+    right: 70%;
+    top: 30%;
+}
+
+ul {
+  list-style: none;
+  color: white;
+}
+
+
+        button {
+            backdrop-filter: blur(10px);
+            background-color: rgba(65, 65, 65, 0.733);
+            padding: 10px 20px;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button:hover {
+          background-color: rgba(255, 255, 255, 0.308);
+        }
+
+        .home {
+          position: absolute;
+          bottom: 2%;
+          right: 2%;
+        }
+
+
+  </style>
+</head>
+<body>
+    <form class ="score">
+      <div class="container">
+        <img class ="title" src="https://cdn.discordapp.com/attachments/897579462772785152/1196750110491684935/scores-table-16-01-2024_2.png?ex=65b8c364&is=65a64e64&hm=5577c3450507805647bffa046efdcd5cb44508fbc87e2ac8f9729eeb33111482&" alt="https://cdn.discordapp.com/attachments/897579462772785152/1196750110491684935/scores-table-16-01-2024_2.png?ex=65b8c364&is=65a64e64&hm=5577c3450507805647bffa046efdcd5cb44508fbc87e2ac8f9729eeb33111482&">
+      </div>
+      <div  class="user">
+        <img src="../style/Username.png">
+      </div>
+      <div class="datauser">
+        <ul>
+          {{range .Username}}
+            <li>{{.}}</li>
+          {{end}}
+        </ul>
+      </div>
+
+      <div  class="scores">
+        <img src="../style/Scores.png">
+      </div>
+      <div class="datascore">
+        <ul>
+          {{range .Score}}
+            <li>{{.}}</li>
+          {{end}}
+        </ul> 
+      </div>
+
+    </form>
+
+    <div class="home">
+      <a href="http://localhost:8080/home">
+        <button>Go back home</button>
+      </a>
+    </div>
+</body>
+</html>

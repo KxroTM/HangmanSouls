@@ -1,0 +1,93 @@
+
+body {
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/92726830869919146/2FA5EA827A919FEF7D5CC4A74A7491ADDF729E01/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+    background-position-y: 53%;
+    background-position-x: 110%;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f032;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    position: sticky;
+    margin-top: 3%;
+    margin-left: 0%;
+    height: 650px;
+    width: 600px;   
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(65, 65, 65, 0.308);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+}
+.scoreboard {
+    margin-top: 10%;    
+}
+
+.neon {
+    color: #ffffff;
+    text-shadow:  0 0 7px #fff, 
+                0 0 10px #fff, 
+}
+
+form.score {
+    position: sticky;
+    margin-top: 3%;
+    margin-left: 0%;
+    height: 650px;
+    width: 600px;   
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(65, 65, 65, 0.308);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+    margin-bottom: 10px; 
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+img {
+    width: 496px; 
+    height: 77px; 
+    flex-shrink: 0;
+}
+
+.user img{
+    width: 200px; 
+    height: 50px; 
+    flex-shrink: 0;
+    position: absolute;
+    right: 55%;
+    top: 20%;
+}
+
+.scores img{
+    width: 170px; 
+    height: 45px; 
+    flex-shrink: 0;
+    position: absolute;
+    right: 15%;
+    top: 20.2%;
+}
+
+.datascore {
+    position: absolute;
+    right: 15%;
+    top: 30%;
+}
+
+.datauser {
+    position: absolute;
+    right: 55%;
+    top: 30%;
+}

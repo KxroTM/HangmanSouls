@@ -1,0 +1,479 @@
+@media screen and (max-width : 1499px ) {
+    body {
+        background-image: url("https://steamuserimages-a.akamaihd.net/ugc/92726830869919146/2FA5EA827A919FEF7D5CC4A74A7491ADDF729E01/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+        background-position-y: 53%;
+        background-position-x: 110%;
+        background-size: cover;
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f032;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .shop {
+        width: 471px;
+        height: 107px;
+        flex-shrink: 0;
+        position: absolute;
+        top : 3%;
+    }
+
+    .cadre {
+        width: 1250px;
+        height: 550px;
+        flex-shrink: 0;
+        border-radius: 61px;
+        background: rgba(255, 255, 255, 0.27);
+        position: relative;
+        top : 5%;
+        left: -3%;
+    }
+
+
+    .heart {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 8%;
+        top: 12%;
+    }
+
+    .ExtraLife {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 10%;
+        top: 29%;
+    }
+
+    .TextExtraLife {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left : 22%;
+        top : 25%;
+
+    }
+
+    .ButtonWhite1 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82%;
+        top: 33%;
+        border-radius: 29px;
+        background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(0deg, #FFF 0%, #FFF 100%);
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .OmbreNoir1 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82.5%;
+        top: 34%;
+        background: linear-gradient(0deg, #000 0%, #000 100%), linear-gradient(0deg, #000 0%, #000 100%), #000;
+        position: absolute;
+    }
+
+    .Stars {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 10%;
+        top: 40%;
+    }
+
+    .DoublePoints{
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 8%;
+        top: 56%; 
+    }
+
+    .TextDoublePoints {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left : 22%;
+        top : 50%;
+    }
+
+
+    .OmbreNoir2 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82.5%;
+        top: 62%;
+        background: linear-gradient(0deg, #000 0%, #000 100%), linear-gradient(0deg, #000 0%, #000 100%), #000;
+        position: absolute;
+        
+    }
+
+    .ButtonWhite2 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82%;
+        top: 61%;
+        border-radius: 29px;
+        background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(0deg, #FFF 0%, #FFF 100%);
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .Book {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 8%;
+        top: 68%;
+    }
+
+    .ExtraClue{
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 8%;
+        top: 81%; 
+    }
+
+    .TextExtraClue {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left : 22%;
+        top : 74%;
+    }
+
+    .OmbreNoir3 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82.5%;
+        top: 87%;
+        background: linear-gradient(0deg, #000 0%, #000 100%), linear-gradient(0deg, #000 0%, #000 100%), #000;
+        position: absolute;
+        
+    }
+
+    .ButtonWhite3 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82%;
+        top: 86%;
+        border-radius: 29px;
+        background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(0deg, #FFF 0%, #FFF 100%);
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .money {
+        top: 4%;
+        right: 10%;
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    h1 {
+        color: white;
+        font-size: 35px;
+    }
+
+
+    .home button {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.27);
+        padding: 10px 20px;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .home button:hover {
+        background-color: rgba(255, 255, 255, 0.582);
+    }
+
+    .home {
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+    }
+}
+
+@media screen and (min-width : 1500px ) {
+
+    body {
+        background-image: url("https://steamuserimages-a.akamaihd.net/ugc/92726830869919146/2FA5EA827A919FEF7D5CC4A74A7491ADDF729E01/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+        background-position-y: 53%;
+        background-position-x: 110%;
+        background-size: cover;
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f032;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .shop {
+        width: 471px;
+        height: 107px;
+        flex-shrink: 0;
+        position: absolute;
+        top : 3%;
+    }
+
+    .cadre {
+        width: 1600px;
+        height: 700px;
+        flex-shrink: 0;
+        border-radius: 61px;
+        background: rgba(255, 255, 255, 0.27);
+        position: relative;
+        top : 5%;
+    }
+
+
+    .heart {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 10%;
+        top: 15%;
+    }
+
+    .ExtraLife {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 11%;
+        top: 29%;
+    }
+
+    .TextExtraLife {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left : 22%;
+        top : 25%;
+
+    }
+
+    .ButtonWhite1 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82%;
+        top: 33%;
+        border-radius: 29px;
+        background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(0deg, #FFF 0%, #FFF 100%);
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .OmbreNoir1 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82.5%;
+        top: 34%;
+        background: linear-gradient(0deg, #000 0%, #000 100%), linear-gradient(0deg, #000 0%, #000 100%), #000;
+        position: absolute;
+    }
+
+    .Stars {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 11%;
+        top: 44%;
+    }
+
+    .DoublePoints{
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 10%;
+        top: 56%; 
+    }
+
+    .TextDoublePoints {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left : 22%;
+        top : 50%;
+    }
+
+
+    .OmbreNoir2 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82.5%;
+        top: 62%;
+        background: linear-gradient(0deg, #000 0%, #000 100%), linear-gradient(0deg, #000 0%, #000 100%), #000;
+        position: absolute;
+        
+    }
+
+    .ButtonWhite2 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82%;
+        top: 61%;
+        border-radius: 29px;
+        background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(0deg, #FFF 0%, #FFF 100%);
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .Book {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 11%;
+        top: 71%;
+    }
+
+    .ExtraClue{
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left: 11%;
+        top: 81%; 
+    }
+
+    .TextExtraClue {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        position: absolute;
+        left : 22%;
+        top : 74%;
+    }
+
+    .OmbreNoir3 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82.5%;
+        top: 87%;
+        background: linear-gradient(0deg, #000 0%, #000 100%), linear-gradient(0deg, #000 0%, #000 100%), #000;
+        position: absolute;
+        
+    }
+
+    .ButtonWhite3 {
+        width: 156px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 29px;
+        right: 82%;
+        top: 86%;
+        border-radius: 29px;
+        background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(0deg, #FFF 0%, #FFF 100%);
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .money {
+        top: 4%;
+        right: 10%;
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    h1 {
+        color: white;
+        font-size: 35px;
+    }
+
+
+    .home button {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.27);
+        padding: 10px 20px;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .home button:hover {
+        background-color: rgba(255, 255, 255, 0.582);
+    }
+
+    .home {
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+    }
+}

@@ -1,0 +1,40 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/00/97/39/00973911031e06bbed773d4e8987df44.gif");
+    background-size: cover;
+} 
+
+.titre {
+    text-align: center;
+    font: italic small-caps bold 16px/2 cursive;
+    color: whitesmoke;
+    margin-top: 15%;
+} 
+
+.input {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: rgb(84, 215, 222);
+    --main-color: #323232;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+    margin-left: 43%;
+  }
+  
+  .input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+  
+  .input:focus {
+    border: 2px solid var(--input-focus);
+  }

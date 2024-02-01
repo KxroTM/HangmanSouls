@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>HangmanWeb</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('https://i.redd.it/xtu7z1lgbkh71.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            position: relative;
+            top: -25%;
+            right: -40%;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: bisque;
+            color: brown;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .beta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+        }
+
+        .beta p {
+            font-size: 11px;
+        }
+
+        .beta button {
+            background-color: rgb(251, 173, 77);
+        }
+
+        .beta button:hover {
+            background-color: rgb(251, 173, 77);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        button:hover {
+            background-color: bisque;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        h1 {
+            font-size: 55px;
+            margin: 0;
+            color: bisque;
+            font-weight: bold;
+        }
+
+        p {
+            color: bisque;
+            margin: 10px 0;
+            font-size: 19px;
+            font-weight: lighter;
+        }
+
+        .shop {
+            position: relative;
+            right: 480%;
+        }
+
+        .multi {
+            position: relative;
+            left: 55%;
+        }
+
+        .custom {
+            position: relative;
+            right: 55%;
+        }
+
+    </style>   
+</head>
+<body>
+
+    <div class="header">
+        <a href="http://localhost:8080/registershop">
+            <button class="shop">Magasin</button>
+        </a>
+        <a href="http://localhost:8080/scoreboard">
+            <button class="scoreboard">Tableau de bord</button>
+        </a>
+        <a href="http://localhost:8080/login">
+            <button class="top-right-button">Administrateur</button>
+        </a>
+    </div>
+    <h1>Hangman.</h1>
+    <p>Choisissez un mode de jeu</p>
+    
+    <form method="get" action="/register">
+        <button type="submit">Hangman</button>
+    </form>
+
+    <form method="post" action="/startmulti">
+        <button type = "subit" class="multi">Multijoueur</button>
+    </form>
+
+    <form method="post" action="/registercustom">
+        <button type = "subit" class="custom">Personnaliser</button>
+    </form>
+    
+    <form method="post" action="/hangoftheday">
+        <button type = "subit" class="hangoftheday">Hangman du jour</button>
+    </form>
+    
+    <div class="beta">
+        <form method="post" action="/beta">
+            <button type="submit">NOUVEAU : HARDCORE *</button>
+        </form>
+        <p>*Non compétitif</p>
+    </div>
+
+</body>
+
+</html>

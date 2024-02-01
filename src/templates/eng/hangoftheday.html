@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Hangman of the day</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url("https://i.pinimg.com/originals/22/ba/4d/22ba4d403b0c9c172526be971b0c0ab7.gif");
+            background-position-y: 90%;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .contennue_carré_noir {
+            background-color: rgb(109, 109, 109);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin: 0;
+            color: rgb(255, 0, 0);
+        }
+
+        h2 {
+            font-size: 15px;
+            margin: 0;
+            color: white;
+        }
+
+        .zone_texte {
+            background-color: rgb(109, 109, 109);
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .tape_ecrire {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #876464;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: bold;
+            margin: 0;
+            color: rgb(255, 255, 255);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgb(109, 109, 109);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .letterguessed {
+            position: relative;
+            top: -40%;
+            right: -220%;
+            background-color: rgba(109, 109, 109, 0.067);
+            padding: 10px;
+            border-radius: 10px;
+            min-height: 50px;
+            width: 150px;
+        }
+
+        /* ECRAN ELIAS */
+        @media screen and (min-width : 1500px ) {
+            .Gameover {
+                position: absolute;
+                top: 33%;
+                left: 30%;
+            
+            }
+
+            .bouuton button {
+                font-family: "";
+                position: absolute; 
+                bottom: 36%;
+                left: 38%;
+                cursor: pointer;
+                font-size: 120%;
+                background-color: rgba(95, 158, 160, 0.082);
+                border-color: rgba(0, 0, 0, 0.349);
+                color: ghostwhite;
+                letter-spacing: 0.5rem;
+                border: none;
+
+            }
+            
+
+            .Chevalier {
+                position: absolute;
+                bottom: 32%;
+                right: 24%;
+                filter: brightness(0.55);
+                
+            }
+            .giveup {
+                position: absolute; 
+                bottom: 36%;
+                left: 51%;
+                font-size: 100%;
+                width: 20%;
+                
+            }
+            .bouton button {
+                font-family: "";
+                position: absolute; 
+                bottom: 41%;
+                left: 56%;
+                cursor: pointer;
+                font-size: 120%;
+                background-color: rgba(95, 158, 160, 0);
+                border-color: rgba(0, 0, 0, 0);
+                color: ghostwhite;
+                letter-spacing: 0.5rem;
+                border: none;
+
+                height: 5%;
+
+            }
+
+        .Win {
+            position: absolute;
+            top: 10%;
+            left: 33%;
+           
+            }
+
+        .Chevalier2 {
+                position: absolute;
+                bottom: 27%;
+                right: 45%;
+                filter: brightness(0.55);
+                
+            }
+
+            .home {
+                position: absolute; 
+                bottom: 45.5%;
+                left: 27%;
+                font-size: 100%; 
+                width: 20%;               
+            }
+        }
+
+        /* ECRAN YOUSSEF */
+        @media screen and (max-width : 1499px ) {
+            .Gameover {
+            position: absolute;
+            top: 28%;
+            left: 20%;
+            
+            }
+
+            .bouuton button {
+                font-family: "";
+                position: absolute; 
+                bottom: 25%;
+                left: 30%;
+                cursor: pointer;
+                font-size: 120%;
+                background-color: rgba(95, 158, 160, 0.082);
+                border-color: rgba(0, 0, 0, 0.349);
+                color: ghostwhite;
+                letter-spacing: 0.5rem;
+                border: none;
+
+            }
+            
+
+            .Chevalier {
+                position: absolute;
+                bottom: 18%;
+                right: 18%;
+                filter: brightness(0.55);
+                
+            }
+            .giveup {
+                position: absolute; 
+                bottom: 25%;
+                left: 53%;
+                font-size: 100%;
+                width: 20%;
+                
+            }
+            
+            .bouton button {
+                font-family: "";
+                position: absolute; 
+                bottom: 41%;
+                left: 58%;
+                cursor: pointer;
+                font-size: 120%;
+                background-color: rgba(95, 158, 160, 0);
+                border-color: rgba(0, 0, 0, 0);
+                color: ghostwhite;
+                letter-spacing: 0.5rem;
+                border: none;
+
+                height: 5%;
+
+            }
+
+            .Win {
+                position: absolute;
+                top: -12%;
+                left: 27%;
+           
+            }
+
+            .Chevalier2 {
+                position: absolute;
+                bottom: 22%;
+                right: 45%;
+                filter: brightness(0.55);
+                width: 14.5%;
+                
+            }
+
+            .home {
+                position: absolute; 
+                bottom: 45.5%;
+                left: 16%;
+                font-size: 100%; 
+                width: 30%;               
+            }
+        
+        }
+        
+
+    </style>
+</head>
+<body>
+    {{if (eq .GameState 1)}}
+
+
+        <!-- CODE DE Win  -->
+        <div class="Win">
+            <img src="../style/2bw103b-removebg-preview.png" width="150%"/>
+        </div>
+        <div class="Chevalier2">
+            <img src="../style/38fe1f49248c4096f1d29e8e45f8d466u8PrF0vi4LvB0WqE-0-removebg-preview.png" width="100%"/>
+        </div>
+        <br/>  
+       
+        <div class ="bouton">
+            <a href="http://localhost:8080/hangman">
+                <button>Continue</button>
+            </a>
+        <div class="home">
+            <a href="http://localhost:8080/home">
+                <button>Go back home</button>
+            </a>
+        </div>
+        <!-- FIN -->
+
+
+    {{else if (eq .GameState 2)}}
+
+
+        <!-- CODE DE LOOSE  -->
+        <div class="Gameover">
+            <img src="../style/Game_Over_Deltarune-removebg-preview.png" width="150%"/>
+        </div>
+        <div class="Chevalier">
+            <img src="https://cdn.discordapp.com/attachments/1151066660715896855/1196770383655878697/ko-removebg-preview.png?ex=65b8d646&is=65a66146&hm=a49b05737faf39328ad5be0f4613873ccc615a8695bb16bcefc27b376e0028a6&" width="47%"/>
+            <p>The word was {{.Word}}</p>
+        </div>
+        <br/>  
+       
+        <div class ="bouuton">
+            <a href="http://localhost:8080/retry">
+                <button>Respawn</button>
+            </a>
+            <a href="http://localhost:8080/home">
+                <div class="giveup">
+                    <button>Give up</button>
+            </a>
+        </div>
+        <!-- FIN -->
+
+
+
+    {{else}}
+    <form method="post" action="/hangman">
+
+        <h1> Guess the Word </h1>
+        <br/>
+        <div class="middle">
+            <div class="contennue_carré_noir">
+            <h2>❤️ {{.TryLeft}} HP</h2>
+            </div><br>
+            <div class="contennue_carré_noir">
+            <h2>{{.WordHidden}}</h2>
+            </div>
+        </div>
+        <div class="zone_texte">
+            <input class="tape_ecrire" name="answer" placeholder="Choose a letter..." autofocus>
+        </div>
+        <br/>
+        <button type="submit">Send</button>
+        <div class = "letterguessed">
+            <p>Letters guessed : {{.Guessedletter}}</p>
+        </div>
+    </form>
+    {{end}}
+
+
+</body>
+</html>

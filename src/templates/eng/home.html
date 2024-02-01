@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('https://i.redd.it/xtu7z1lgbkh71.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            position: relative;
+            top: -25%;
+            right: -40%;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: bisque;
+            color: brown;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .beta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+        }
+
+        .beta p {
+            font-size: 11px;
+        }
+
+        .beta button {
+            background-color: rgb(251, 173, 77);
+        }
+
+        .beta button:hover {
+            background-color: rgb(251, 173, 77);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        button:hover {
+            background-color: bisque;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        h1 {
+            font-size: 55px;
+            margin: 0;
+            color: bisque;
+            font-weight: bold;
+        }
+
+        p {
+            color: bisque;
+            margin: 10px 0;
+            font-size: 19px;
+            font-weight: lighter;
+        }
+
+        .shop {
+            position: relative;
+            right: 480%;
+        }
+
+        .submenu {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .submenu .multi {
+            margin-right: 10px
+        }
+
+
+        @media screen and (max-width : 1499px ) {
+            .header {
+                position: relative;
+                top: -22%;
+                right: -38%;
+            }
+
+            .shop {
+                position: relative;
+                left: -350%;
+            }
+        }
+
+    </style>   
+</head>
+<body>
+
+    <div class="header">
+        <a href="http://localhost:8080/registershop">
+            <button class="shop">Shop</button>
+        </a>
+        <a href="http://localhost:8080/scoreboard">
+            <button class="scoreboard">Scoreboard</button>
+        </a>
+        <a href="http://localhost:8080/login">
+            <button class="top-right-button">Admin</button>
+        </a>
+    </div>
+    <h1>Hangman.</h1>
+    <p>Choose a gamemode</p>
+    
+    <form method="get" action="/register">
+        <button type="submit">Hangman</button>
+    </form>
+    <div class = "submenu">
+        <form method="post" action="/startmulti">
+            <button type = "subit" class="multi">Multiplayer</button>
+        </form>
+        <form method="post" action="/registercustom">
+            <button type = "subit" class="custom">Custom</button>
+        </form>
+    </div>
+    <form method="post" action="/hangoftheday">
+        <button type = "subit" class="hangoftheday">Hangman of the day *</button>
+    </form>
+    
+    <div class="beta">
+        <form method="post" action="/beta">
+            <button type="submit">NEW : HARDCORE *</button>
+        </form>
+        <p>*Non competitive</p>
+    </div>
+
+</body>
+
+</html>

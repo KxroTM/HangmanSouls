@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../../style/wrongregister.css" rel="stylesheet">
+        <title>Settings</title>
+    </head>
+    <body>
+        <div class="card">
+            <div class="title">
+                <h1>HANGMAN</h1>
+            </div>
+
+            <form method="post">
+                <label class="container">
+                    <input type="radio" name="difficulty" value="easy" />
+                    <div class="checkmark"></div>
+                </label>
+                <div class="difficulty">
+                    <p>Easy</p>
+                </div>
+
+                <label class="container">
+                    <input type="radio" name="difficulty" value="normal" />
+                    <div class="checkmark"></div>
+                </label>
+                <div class="difficulty">
+                    <p>Normal</p>
+                </div>
+
+                <label class="container">
+                    <input type="radio" name="difficulty" value="hard" />
+                    <div class="checkmark"></div>
+                </label>
+                <div class="difficulty">
+                    <p>Hard</p>
+                </div>
+
+                <div class="input-wrapper">
+                    <input class="input-box" type="text" name="username" placeholder="Enter your username">
+                    <span class="underline"></span>
+                </div>
+
+                <div class="btn">
+                    <button class="button1" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Play&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                </div>
+
+                <div class = "error">
+                    <p>Difficulty not chosen <br> or nickname not specified !</p>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
