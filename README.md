@@ -11,8 +11,8 @@ Make sure you have Go installed on your machine. If not, you can download and in
 1. Clone the Git repository to your local machine :
 
    ```bash
-   git clone https://ytrack.learn.ynov.com/git/ayoussef/Hangman-Web.git
-   cd Hangman-Web
+   git clone https://github.com/KxroTM/HangmanSouls/
+   cd HangmanSouls
    ```
 
 ## Running the Game
